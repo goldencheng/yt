@@ -1,4 +1,4 @@
-import ffmpeg.exe
+import subprocess 
 import os
 
 def merge_video_and_audio(video_file, audio_file):
@@ -19,7 +19,7 @@ def merge_video_and_audio(video_file, audio_file):
     
     # 執行命令
     
-    ffmpeg.run(command)
+    subprocess.run(command)
     os.remove(video_file)
     os.remove(audio_file)
     print(f"合併完成，輸出檔案：{output_file}")
